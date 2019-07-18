@@ -16,6 +16,8 @@ protocol TimeZonesDelegate: class {
 class GlobalTimesTableViewController: UITableViewController {
     
     var timeZones: [String] = []
+    
+    var isDark: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,27 @@ class GlobalTimesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    
+    @IBAction func toggleTheme(_ sender: UIBarButtonItem) {
+        if isDark {
+            AppearanceHelper.setLightAppearance()
+            sender.title = "Dark"
+        } else {
+        AppearanceHelper.setDarkAppearance()
+            sender.title = "Light"
+            
+        }
+        isDark = !isDark
+        
+        let windows = UIApplication.shared.windows
+        for window in windows {
+            for view in window.subviews {
+                view.removeFromSuperview()
+                window.addSubview(view)
+            }
+        }
+        
+    }
     // MARK: - Table view data source
 
 

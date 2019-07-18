@@ -28,7 +28,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCY-H8-NFF">
                                             <rect key="frame" x="20" y="50" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kiQ-Tw-glP" customClass="ClockView" customModule="GlobalTime" customModuleProvider="target">
@@ -59,6 +59,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="DZa-PZ-WDf">
+                        <barButtonItem key="leftBarButtonItem" title="Dark" id="7zZ-u7-h0l">
+                            <connections>
+                                <action selector="toggleTheme:" destination="S0r-mD-CSh" id="UMj-4P-TGF"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pxt-Sj-HoD">
                             <connections>
                                 <segue destination="pdz-WC-Ne7" kind="show" identifier="AddTimeZone" id="3CR-UX-Iqf"/>
