@@ -41,10 +41,18 @@ class TimeZonesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TimeZoneCell", for: indexPath)
-
+        
+        var city: String = ""
         let timeZone = knownTimeZoneIdentifiers[indexPath.row]
         let zones = timeZone.split(separator: "/")
-        let city = zones[1].replacingOccurrences(of: "_", with: " ")
+        
+        if zones.count == 3 {
+            city = zones[2].replacingOccurrences(of: "_", with: " ")
+        } else if zones.count == 2 {
+            city = zones[1].replacingOccurrences(of: "_", with: " ")
+        } else {
+            city = zones[0].replacingOccurrences(of: "_", with: " ")
+        }
         
         cell.textLabel?.text = city
 

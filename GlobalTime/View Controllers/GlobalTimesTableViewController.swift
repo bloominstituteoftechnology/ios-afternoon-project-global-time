@@ -47,8 +47,18 @@ class GlobalTimesTableViewController: UITableViewController {
         let time = timeZones[indexPath.row]
         cell.clockView?.timezone = TimeZone.init(identifier: time)
         
+        var city: String = ""
         let zones = time.split(separator: "/")
-        let city = zones[1].replacingOccurrences(of: "_", with: " ")
+        
+        if zones.count == 3 {
+            city = zones[2].replacingOccurrences(of: "_", with: " ")
+        } else if zones.count == 2 {
+            city = zones[1].replacingOccurrences(of: "_", with: " ")
+        } else {
+            city = zones[0].replacingOccurrences(of: "_", with: " ")
+        }
+        
+//        let city = zones[1].replacingOccurrences(of: "_", with: " ")
         cell.textLabel?.text = city
         
         return cell
