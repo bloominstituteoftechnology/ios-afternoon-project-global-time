@@ -48,10 +48,9 @@ class GlobalTimesTableViewController: UITableViewController {
         cell.clockView?.timezone = TimeZone.init(identifier: time)
         
         let zones = time.split(separator: "/")
-        print(zones[1])
-        
         let city = zones[1].replacingOccurrences(of: "_", with: " ")
         cell.textLabel?.text = city
+        
         return cell
     }
     
@@ -91,15 +90,20 @@ class GlobalTimesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "AddTimeZone" {
+            let navVC = segue.destination as! UINavigationController
+            let timeZoneVC = navVC.topViewController as! TimeZonesTableViewController
+            timeZoneVC.delegate = self
+            
+        }
+        
     }
-    */
+    
 
 }
 
@@ -108,6 +112,10 @@ extension GlobalTimesTableViewController: TimeZonesDelegate {
     
     
     func didChooseTimeZone(_ timezone: String) {
+        navigationController?.dismiss(animated: true, completion: nil)
+        timeZones.append(timezone)
+        tableView.reloadData()
+        
         
     }
     

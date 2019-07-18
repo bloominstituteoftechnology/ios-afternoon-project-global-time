@@ -61,7 +61,7 @@
                     <navigationItem key="navigationItem" id="DZa-PZ-WDf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pxt-Sj-HoD">
                             <connections>
-                                <segue destination="yaf-pf-C5L" kind="presentation" id="Tdy-rn-iwo"/>
+                                <segue destination="pdz-WC-Ne7" kind="show" identifier="AddTimeZone" id="3CR-UX-Iqf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -69,6 +69,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCb-UJ-E1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="269" y="205"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CZ3-yz-6Sm">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SnJ-T4-TeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="pdz-WC-Ne7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Psm-Of-iL7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yaf-pf-C5L" kind="relationship" relationship="rootViewController" id="TFs-lx-vCp"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1139" y="205"/>
         </scene>
         <!--Time Zones Table View Controller-->
         <scene sceneID="cip-vt-82V">
@@ -78,15 +94,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6ov-Bx-7om">
-                            <rect key="frame" x="0.0" y="72" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <items>
-                                <barButtonItem systemItem="cancel" id="jiv-2c-8IL"/>
-                            </items>
-                        </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="ltH-Ao-9Ib" style="IBUITableViewCellStyleDefault" id="Ewa-Iv-hxe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeZoneCell" textLabel="ltH-Ao-9Ib" style="IBUITableViewCellStyleDefault" id="Ewa-Iv-hxe">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ewa-Iv-hxe" id="xcW-WP-EuY">
@@ -109,10 +118,17 @@
                             <outlet property="delegate" destination="yaf-pf-C5L" id="DAV-rf-9zo"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="lfA-81-Zrq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="I9k-LC-b2f">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="yaf-pf-C5L" id="6tJ-RG-k0d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDW-gL-6UZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="205"/>
+            <point key="canvasLocation" x="1988" y="205"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="juc-pG-MXM">

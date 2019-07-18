@@ -12,6 +12,7 @@ class ClockTableViewCell: UITableViewCell {
     
     @IBOutlet var timeZoneLabel: UILabel!
     @IBOutlet var clockView: ClockView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

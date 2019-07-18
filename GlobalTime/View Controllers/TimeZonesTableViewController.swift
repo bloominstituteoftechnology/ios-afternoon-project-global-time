@@ -9,6 +9,10 @@
 import UIKit
 
 class TimeZonesTableViewController: UITableViewController {
+    
+    let knownTimeZoneIdentifiers = TimeZone.knownTimeZoneIdentifiers
+    
+    var delegate: TimeZonesDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,27 +24,41 @@ class TimeZonesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+        
+        
     }
+    
+    
+    // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return knownTimeZoneIdentifiers.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TimeZoneCell", for: indexPath)
 
-        // Configure the cell...
+        let timeZone = knownTimeZoneIdentifiers[indexPath.row]
+        let zones = timeZone.split(separator: "/")
+        let city = zones[1].replacingOccurrences(of: "_", with: " ")
+        
+        cell.textLabel?.text = city
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        delegate?.didChooseTimeZone(knownTimeZoneIdentifiers[indexPath.row])
+        
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
