@@ -12,6 +12,9 @@
 		6FD4F22622E0FB70009E8E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD4F22522E0FB70009E8E2F /* Assets.xcassets */; };
 		6FD4F22922E0FB70009E8E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD4F22722E0FB70009E8E2F /* LaunchScreen.storyboard */; };
 		6FD4F23122E0FBD0009E8E2F /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4F23022E0FBD0009E8E2F /* ClockView.swift */; };
+		6FD4F23322E0FE59009E8E2F /* GlobalTimesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4F23222E0FE59009E8E2F /* GlobalTimesTableViewController.swift */; };
+		6FD4F23522E0FE6A009E8E2F /* TimeZonesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4F23422E0FE6A009E8E2F /* TimeZonesTableViewController.swift */; };
+		6FD4F23722E0FE7E009E8E2F /* ClockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4F23622E0FE7E009E8E2F /* ClockTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		6FD4F22822E0FB70009E8E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FD4F22A22E0FB70009E8E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FD4F23022E0FBD0009E8E2F /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClockView.swift; path = ../../ClockView.swift; sourceTree = "<group>"; };
+		6FD4F23222E0FE59009E8E2F /* GlobalTimesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTimesTableViewController.swift; sourceTree = "<group>"; };
+		6FD4F23422E0FE6A009E8E2F /* TimeZonesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZonesTableViewController.swift; sourceTree = "<group>"; };
+		6FD4F23622E0FE7E009E8E2F /* ClockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,8 @@
 		6FD4F21222E0FB6F009E8E2F = {
 			isa = PBXGroup;
 			children = (
+				6FD4F23822E0FE8C009E8E2F /* View Controllers */,
+				6FD4F23922E0FE9E009E8E2F /* View */,
 				6FD4F21D22E0FB6F009E8E2F /* GlobalTime */,
 				6FD4F21C22E0FB6F009E8E2F /* Products */,
 			);
@@ -62,6 +70,23 @@
 				6FD4F22A22E0FB70009E8E2F /* Info.plist */,
 			);
 			path = GlobalTime;
+			sourceTree = "<group>";
+		};
+		6FD4F23822E0FE8C009E8E2F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6FD4F23222E0FE59009E8E2F /* GlobalTimesTableViewController.swift */,
+				6FD4F23422E0FE6A009E8E2F /* TimeZonesTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		6FD4F23922E0FE9E009E8E2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6FD4F23622E0FE7E009E8E2F /* ClockTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FD4F23322E0FE59009E8E2F /* GlobalTimesTableViewController.swift in Sources */,
+				6FD4F23722E0FE7E009E8E2F /* ClockTableViewCell.swift in Sources */,
 				6FD4F21F22E0FB6F009E8E2F /* AppDelegate.swift in Sources */,
+				6FD4F23522E0FE6A009E8E2F /* TimeZonesTableViewController.swift in Sources */,
 				6FD4F23122E0FBD0009E8E2F /* ClockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
