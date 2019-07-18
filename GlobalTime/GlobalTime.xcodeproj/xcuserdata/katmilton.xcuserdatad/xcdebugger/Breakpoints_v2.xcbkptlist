@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Helpers/AppearanceHelper.swift"
-            timestampString = "585181558.888945"
+            timestampString = "585186603.8518569"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "setDarkAppearance()"
             landmarkType = "7">
          </BreakpointContent>

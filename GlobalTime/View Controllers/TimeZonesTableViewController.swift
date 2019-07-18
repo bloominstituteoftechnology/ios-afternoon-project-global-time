@@ -12,11 +12,13 @@ class TimeZonesTableViewController: UITableViewController {
     
     let knownTimeZoneIdentifiers = TimeZone.knownTimeZoneIdentifiers
     
+    var sortedTimeZones: [String] = []
+    
     var delegate: TimeZonesDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -31,8 +31,9 @@ enum AppearanceHelper {
         
         UITableView.appearance().backgroundColor = almostBlack
         UITableViewCell.appearance().backgroundColor = almostBlack
-        UILabel.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).textColor = yellowColor
-        UILabel.appearance(whenContainedInInstancesOf: [ClockTableViewCell.self]).textColor = yellowColor
+        UILabel.appearance().textColor = yellowColor
+//        UILabel.appearance(whenContainedInInstancesOf: [UIView.self]).textColor = yellowColor
+//        UILabel.appearance(whenContainedInInstancesOf: [ClockTableViewCell.self]).textColor = yellowColor
         
     }
     
@@ -47,9 +48,13 @@ enum AppearanceHelper {
         
         
         UITableView.appearance().backgroundColor = grayish
+        
         UITableViewCell.appearance().backgroundColor = grayish
-        UILabel.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).textColor = blueColor
-        UILabel.appearance(whenContainedInInstancesOf: [ClockTableViewCell.self]).textColor = blueColor
+        UILabel.appearance().textColor = blueColor
+//        UILabel.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).textColor = blueColor
+//        UILabel.appearance(whenContainedInInstancesOf: [ClockTableViewCell.self]).textColor = blueColor
+        
+        
     }
     
 }

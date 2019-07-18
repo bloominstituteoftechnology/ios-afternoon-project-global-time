@@ -25,11 +25,7 @@ class GlobalTimesTableViewController: UITableViewController {
         title = "Global Times"
         
         timeZones.append(TimeZone.current.identifier)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     
@@ -51,6 +47,8 @@ class GlobalTimesTableViewController: UITableViewController {
                 window.addSubview(view)
             }
         }
+        
+        tableView.reloadData()
         
     }
     // MARK: - Table view data source
@@ -83,6 +81,12 @@ class GlobalTimesTableViewController: UITableViewController {
         
 //        let city = zones[1].replacingOccurrences(of: "_", with: " ")
         cell.textLabel?.text = city
+       
+        if isDark {
+            cell.textLabel?.textColor = AppearanceHelper.yellowColor
+        } else {
+            cell.textLabel?.textColor = AppearanceHelper.blueColor
+        }
         
         return cell
     }
