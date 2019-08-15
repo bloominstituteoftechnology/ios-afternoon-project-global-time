@@ -33,7 +33,7 @@ import UIKit
             
             context.beginPath()
             context.setStrokeColor(outterColor)
-            context.move(to: CGPoint(x: (topPoint.x - leftPoint.x) / 2 + 20, y: (leftPoint.y - topPoint.y) / 2))
+            context.move(to: CGPoint(x: (topPoint.x - leftPoint.x) / 2 + 40, y: (leftPoint.y - topPoint.y) / 2 - 20))
             context.addLine(to: CGPoint(x: topPoint.x, y: rightPoint.y - 20))
             context.setLineWidth(lineWidth)
             context.strokePath()
@@ -41,7 +41,7 @@ import UIKit
             context.beginPath()
             context.setStrokeColor(innerColor)
             context.move(to: CGPoint(x: leftPoint.x + 20, y: rightPoint.y + 40))
-            context.addLine(to: CGPoint(x: topPoint.x, y: rightPoint.y + 60))
+            context.addLine(to: CGPoint(x: topPoint.x, y: rightPoint.y + 100))
             context.setLineWidth(lineWidth)
             context.strokePath()
             
